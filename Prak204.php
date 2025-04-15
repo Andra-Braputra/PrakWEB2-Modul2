@@ -7,7 +7,7 @@
     </form>
 
     <?php
-    if (isset($_POST["button"])) {
+        
         $nilai = (int)$_POST["nilai"];
 
         if ($nilai == 0) {
@@ -18,16 +18,16 @@
             $var = "belasan";
         } elseif ($nilai >= 20 && $nilai < 100) {
             $var = "puluhan";
-        } elseif ($nilai >= 100 && $nilai <= 1000) {
+        } elseif ($nilai >= 100 && $nilai < 1000) {
             $var = "ratusan";
-        } elseif ($nilai > 1000) {
+        } elseif ($nilai >= 1000) {
             $var = "Anda Menginput Melebihi Limit Bilangan";
         } else {
             $var = "Input tidak valid";
         }
 
         echo "<h2>Hasil : $var</h2>";
-    }
+    
     ?>
 </body>
 </html>
