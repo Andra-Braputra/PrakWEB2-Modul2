@@ -42,7 +42,6 @@ if (isset($_POST["button"])) {
     $awal = strtolower($_POST["awal"]);
     $akhir = strtolower($_POST["akhir"]);
 
-    // Fungsi map
     function konversi($nilai, $awal, $akhir) {
         if ($awal == $akhir) return $nilai;
 
@@ -82,7 +81,7 @@ if (isset($_POST["button"])) {
     $hasil = konversi($nilai, $awal, $akhir);
 
     if ($hasil !== null) {
-        echo "<h2>Hasil Konversi: $nilai $awal = $hasil $var</h2>";
+        echo "<h2>Hasil Konversi: $hasil $var</h2>";
     } else {
         echo "<h2>Konversi tidak valid.</h2>";
     }
